@@ -1,0 +1,16 @@
+{namespace form=Neos\Form\ViewHelpers}
+<div class="row">
+	<f:if condition="{container.label}">
+		<h2>{container.label}</h2>
+	</f:if>
+	<div class="col-sm-6">
+		<f:for each="{container.column1Elements}" as="element">
+			<form:renderRenderable renderable="{element}" />
+		</f:for>
+	</div>
+	<div class="col-sm-6">
+		<f:for each="{container.column2Elements}" as="element">
+			<form:renderRenderable renderable="{element}" />
+		</f:for>
+	</div>
+</div>

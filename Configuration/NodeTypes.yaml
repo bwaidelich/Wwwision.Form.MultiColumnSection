@@ -1,0 +1,22 @@
+'Wwwision.Form.MultiColumnSection:TwoColumns':
+  superTypes:
+    'Neos.Form.Builder:FormElement': TRUE
+    'Neos.Form.Builder:SectionMixin': TRUE
+    'Neos.Form.Builder:IdentifierMixin': FALSE
+    'Neos.Form.Builder:DefaultValueMixin': FALSE
+    'Neos.Form.Builder:RequiredCheckboxMixin': FALSE
+    'Neos.Form.Builder:ValidatorsMixin': FALSE
+  ui:
+    label: 'Two Columns'
+    icon: 'icon-columns'
+    group: 'form.container'
+    inspector:
+      groups:
+        'formElement':
+          icon: 'icon-columns'
+  childNodes:
+    'elements': ~
+    'column1Elements':
+      type: 'Neos.Form.Builder:ElementCollection'
+    'column2Elements':
+      type: 'Neos.Form.Builder:ElementCollection'

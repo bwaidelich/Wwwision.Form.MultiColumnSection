@@ -1,0 +1,26 @@
+prototype(Wwwision.Form.MultiColumnSection:TwoColumns) < prototype(Neos.Form.FusionRenderer:AbstractSection) {
+    @context.containerElement = ${element}
+    tagName = 'div'
+    attributes.class = 'row'
+    content {
+        legend.tagName = 'h2'
+        elements >
+        column1Elements = Wwwision.Form.MultiColumnSection:TwoColumns.Column {
+            content.collection = ${containerElement.column1Elements}
+        }
+        column2Elements = Wwwision.Form.MultiColumnSection:TwoColumns.Column {
+            content.collection = ${containerElement.column2Elements}
+        }
+    }
+}
+
+prototype(Wwwision.Form.MultiColumnSection:TwoColumns.Column) < prototype(Neos.Fusion:Tag) {
+    tagName = 'div'
+    attributes.class = 'col-sm-6'
+    content = Neos.Fusion:Collection {
+        itemName = 'element'
+        itemRenderer = Neos.Fusion:Renderer {
+            type = ${element.type}
+        }
+    }
+}

@@ -1,0 +1,35 @@
+prototype(Wwwision.Form.MultiColumnSection:TwoColumns.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
+    @class = 'Wwwision\\Form\\MultiColumnSection\\Fusion\\TwoColumnFormElementImplementation'
+    formElementType = 'Wwwision.Form.MultiColumnSection:TwoColumns'
+
+    column1Elements = Neos.Form.Builder:ElementCollection {
+        prototype(Neos.Form.Builder:FormElement.Definition) {
+            renderingOptions._column = 1
+        }
+    }
+    column2Elements = Neos.Form.Builder:ElementCollection {
+        prototype(Neos.Form.Builder:FormElement.Definition) {
+            renderingOptions._column = 2
+        }
+    }
+}
+
+prototype(Neos.Form.Builder:NodeBasedElementCollection) {
+    itemRenderer {
+        twoColumns {
+            @position = 'start'
+            condition = ${q(elementNode).is('[instanceof Wwwision.Form.MultiColumnSection:TwoColumns]')}
+            renderer = Neos.Form.Builder:NodeBasedFormElement {
+                type = 'Wwwision.Form.MultiColumnSection:TwoColumns.Definition'
+                element {
+                    column1Elements = Neos.Form.Builder:NodeBasedElementCollection {
+                        collection = ${q(elementNode).children('column1Elements').children()}
+                    }
+                    column2Elements = Neos.Form.Builder:NodeBasedElementCollection {
+                        collection = ${q(elementNode).children('column2Elements').children()}
+                    }
+                }
+            }
+        }
+    }
+}

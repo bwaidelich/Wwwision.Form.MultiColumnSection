@@ -1,0 +1,18 @@
+{
+    "description": "Flow package with a custom Flow Form Framework Form Element that renders Multi columns",
+    "type": "neos-package",
+    "name": "wwwision/form-multicolumnsection",
+    "require": {
+        "neos/form": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wwwision\\Form\\MultiColumnSection\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Wwwision.Form.MultiColumnSection"
+        }
+    }
+}
