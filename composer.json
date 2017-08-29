@@ -1,6 +1,7 @@
 {
     "description": "Flow package with a custom Flow Form Framework Form Element that renders Multi columns",
     "type": "neos-package",
+    "license": "MIT",
     "name": "wwwision/form-multicolumnsection",
     "require": {
         "neos/form": "^4.0"
