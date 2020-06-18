@@ -4,7 +4,7 @@
     "license": "MIT",
     "name": "wwwision/form-multicolumnsection",
     "require": {
-        "neos/form": "^4.1"
+        "neos/form": "^5.1"
     },
     "autoload": {
         "psr-4": {
