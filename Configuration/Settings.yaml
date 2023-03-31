@@ -9,6 +9,8 @@ Neos:
             implementationClassName: 'Wwwision\Form\MultiColumnSection\Form\TwoColumnFormElement'
             renderingOptions:
               renderableNameInTemplate: container
+            properties:
+              elementClassAttribute: 'row'
 
   Neos:
     fusion:
