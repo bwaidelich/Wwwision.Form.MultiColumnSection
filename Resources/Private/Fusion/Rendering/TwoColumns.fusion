@@ -1,7 +1,8 @@
 prototype(Wwwision.Form.MultiColumnSection:TwoColumns) < prototype(Neos.Form.FusionRenderer:AbstractSection) {
     @context.containerElement = ${element}
     tagName = 'div'
-    attributes.class = 'row'
+    // is set via Configuration/Settings.yaml
+    // attributes.class = 'row'
     content {
         legend.tagName = 'h2'
         elements >
