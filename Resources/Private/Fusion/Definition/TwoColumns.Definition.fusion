@@ -1,6 +1,7 @@
 prototype(Wwwision.Form.MultiColumnSection:TwoColumns.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
     @class = 'Wwwision\\Form\\MultiColumnSection\\Fusion\\TwoColumnFormElementImplementation'
     formElementType = 'Wwwision.Form.MultiColumnSection:TwoColumns'
+    required = ${false}
 
     column1Elements = Neos.Form.Builder:ElementCollection {
         prototype(Neos.Form.Builder:FormElement.Definition) {
