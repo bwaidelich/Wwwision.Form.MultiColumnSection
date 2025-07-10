@@ -5,14 +5,13 @@ Neos:
         formElementTypes:
           'Wwwision.Form.MultiColumnSection:TwoColumns':
             superTypes:
-              'Neos.Form:FormElement': TRUE
-            implementationClassName: 'Wwwision\Form\MultiColumnSection\Form\TwoColumnFormElement'
+              'Neos.Form:FormElement': true
+            implementationClassName: Wwwision\Form\MultiColumnSection\Form\TwoColumnFormElement
             renderingOptions:
               renderableNameInTemplate: container
             properties:
-              elementClassAttribute: 'row'
-
+              elementClassAttribute: row
   Neos:
     fusion:
       autoInclude:
-        'Wwwision.Form.MultiColumnSection': TRUE
+        Wwwision.Form.MultiColumnSection: true

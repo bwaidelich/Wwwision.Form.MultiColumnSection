@@ -1,3 +1,4 @@
+// TODO 9.0 migration: Migration of Neos.Fusion:Collection to Neos.Fusion:Loop needs manual action. The key `collection` has to be renamed to `items` which cannot be done automatically
 prototype(Wwwision.Form.MultiColumnSection:TwoColumns) < prototype(Neos.Form.FusionRenderer:AbstractSection) {
     @context.containerElement = ${element}
     tagName = 'div'
@@ -7,10 +8,10 @@ prototype(Wwwision.Form.MultiColumnSection:TwoColumns) < prototype(Neos.Form.Fus
         legend.tagName = 'h2'
         elements >
         column1Elements = Wwwision.Form.MultiColumnSection:TwoColumns.Column {
-            content.collection = ${containerElement.column1Elements}
+            content.items = ${containerElement.column1Elements}
         }
         column2Elements = Wwwision.Form.MultiColumnSection:TwoColumns.Column {
-            content.collection = ${containerElement.column2Elements}
+            content.items = ${containerElement.column2Elements}
         }
     }
 }
@@ -18,7 +19,7 @@ prototype(Wwwision.Form.MultiColumnSection:TwoColumns) < prototype(Neos.Form.Fus
 prototype(Wwwision.Form.MultiColumnSection:TwoColumns.Column) < prototype(Neos.Fusion:Tag) {
     tagName = 'div'
     attributes.class = 'col-sm-6'
-    content = Neos.Fusion:Collection {
+    content = Neos.Fusion:Loop {
         itemName = 'element'
         itemRenderer = Neos.Fusion:Renderer {
             type = ${element.type}
